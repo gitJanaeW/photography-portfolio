@@ -9,15 +9,14 @@ import About from '..';
 // after each test, cleanup data in simulated DOM (refresh the sim DOM)
 afterEach(cleanup);
 
-describe('About component', () => {
-    // make sure about component renders
+describe('About component renders', () => {
     it('renders', () => {
-        render(<About/>);
+      render(<About />);
     });
-    // test snapshots
+    
     it('matches snapshot DOM node structure', () => {
-        // asFragment: eturns a snapshot of the About component
-        const {asFragment} = render(<About/>);
-        expect(asFragment()).toMatchSnapshot();
+      const { asFragment } = render(<About />);
+      
+      expect(asFragment()).toMatchSnapshot();
     });
-});
+});  
