@@ -42,16 +42,22 @@ function Contact() {
             <form id='contact-form' onSubmit={handleSubmit}>
                 <div>
                     <label ftmlFor='name'>Name:</label>
-                    <input type='text' name='name' onChange={handleChange}/>
+                    <input type='text' name='name' onBlur={handleChange}/>
                 </div>
                 <div>
                     <label htmlFor='email'>Email address:</label>
-                    <input type='email' name='email' onChange={handleChange}/>
+                    <input type='email' name='email' onBlur={handleChange}/>
                 </div>
                 <div>
                     <label htmlFor='message'>Message:</label>
-                    <textarea name='message' row5='5' onChange={handleChange}/>
+                    <textarea name='message' row5='5' onBlur={handleChange}/>
                 </div>
+                {/* this is short circuit syntax: if error message, display errorMessage in a p element */}
+                {errorMessage && (
+                    <div>
+                        <p className='error-text'>{errorMessage}</p> 
+                    </div>
+                )}
                 <button type='submit'>submit</button> 
             </form>
         </section>

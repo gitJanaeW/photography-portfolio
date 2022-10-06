@@ -5,6 +5,7 @@ import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 
 function App() {
+  const [contactSelected, setContactSelected] = useState(false);
   const [categories] = useState([
     {
       name: 'commercial',
@@ -23,11 +24,20 @@ function App() {
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
-      ></Nav>
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+      />
       <main>
-        <Contact></Contact>
-        <Gallery currentCategory={currentCategory}></Gallery>
-        <About></About>
+        {/* This condition ? outcome1 : outcome2 format is called a ternary operator */}
+        {!contactSelected ? (
+          // this <></> syntax is a 'React fragment': allows multiple elements to be grouped together without creating an extra DOM node
+          <>
+            <Gallery currectCategory={currentCategory}/>
+            <About/>
+          </>
+        ) : (
+          <Contact/>
+        )}
       </main>
     </div>
   );
