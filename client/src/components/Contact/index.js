@@ -41,7 +41,7 @@ function Contact() {
             <h1>Contact Me</h1> 
             <form id='contact-form' onSubmit={handleSubmit}>
                 <div>
-                    <label ftmlFor='name'>Name:</label>
+                    <label htmlFor='name'>Name:</label>
                     <input type='text' name='name' onBlur={handleChange}/>
                 </div>
                 <div>

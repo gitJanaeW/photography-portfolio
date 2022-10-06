@@ -32,7 +32,7 @@ function App() {
         {!contactSelected ? (
           // this <></> syntax is a 'React fragment': allows multiple elements to be grouped together without creating an extra DOM node
           <>
-            <Gallery currectCategory={currentCategory}/>
+            <Gallery currentCategory={currentCategory}/>
             <About/>
           </>
         ) : (
