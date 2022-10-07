@@ -126,14 +126,15 @@ const PhotoList = ({ category }) => {
   const toggleModal = (image, i) => {
     // image = entire image array (...image)
     setCurrentPhoto({...image, index: i});
-    setIsModalOpen(true);
+    // setting the state to '!isModalOpen' will allow for toggling, which 'false' would not allow for
+    setIsModalOpen(!isModalOpen);
   }
   // filter through every photot in the array and find every photo that matches the category
   const currentPhotos = photos.filter(photo => photo.category === category);
   return (
     <div>
       {/* render modal if isModalOpen is true */}
-      {isModalOpen && <Modal currentPhoto={currentPhoto}/>}
+      {isModalOpen && <Modal currentPhoto={currentPhoto} onClose={toggleModal}/>}
       <div className="flex-row">
         {currentPhotos.map((image, i) => {
           console.log(category, i);
