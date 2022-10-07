@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/gitJanaeW/photography-portfolio/issues"
   },
-  "homepage": "https://github.com/gitJanaeW.github.io/photography-portfolio",
+  "homepage": "https://github.com/gitJanaeW/photography-portfolio#readme",
   "devDependencies": {
     "gh-pages": "^4.0.0"
   }
