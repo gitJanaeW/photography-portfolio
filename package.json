@@ -1,0 +1,24 @@
+{
+  "name": "photography-portfolio",
+  "version": "1.0.0",
+  "description": "A sample photography portfolio using React <!-- https://codesandbox.io/s/new -->",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitJanaeW/photography-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitJanaeW/photography-portfolio/issues"
+  },
+  "homepage": "https://github.com/gitJanaeW.github.io/photography-portfolio",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
